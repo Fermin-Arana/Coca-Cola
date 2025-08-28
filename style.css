@@ -4,6 +4,12 @@
 
 header{
     padding: 15px 0;
+    position: fixed; /* hace que el header quede fijo en la parte superior */
+    top: 0;
+    width: 100%; /* hace que el header ocupe todo el ancho de la pantalla */
+    left:0;
+    z-index: 2; /* hace que el header quede por encima de otros elementos */
+    background-color: white; /* color de fondo blanco */
 }
 
 header .container a{
@@ -28,4 +34,47 @@ header .logo{
     width: 1140px; /* width pone un ancho fijo */
     margin: 0 auto; /* es el margen entre contenedores, ponerlo asi hace que esten centrados */
     align-items: center; /* el align items trabaja sobre el eje y, el center hace que todas las cajas esten centradas */
+    padding-right: 15px; /* agrega un padding a la derecha */
+    padding-left: 15px; /* agrega un padding a la izquierda */
+}
+
+#inicio{
+    position: relative; /* el position relative hace que el elemento se posicione en relacion a su posicion original */
+}
+
+#inicio .bloque-inicio{
+    position: absolute; /* hace que podamos mover la posicion de nuestro bloque, el absoluto es para que el bloque no "ocupe espacio", entonces se le pueden poner cosas encima */
+    top: 50%; /* mueve el bloque al 50% del contenedor padre */
+    left: 50%; /* mueve el bloque al 50% del contenedor padre */
+    transform: translate(-50%, -50%); /* centra el bloque */
+    text-align: center; /* centra el texto */
+    width: 800px;
+}
+
+#inicio .bloque-inicio h1{
+    font-size: 60px;
+    color: white;
+}
+
+#inicio .bloque-inicio p{
+    font-size: 20px;
+    color: white;
+}
+
+#inicio img{
+    width:100%; /* hace que la imagen ocupe todo el ancho del contenedor */
+    display: block; /* quita el espacio que queda debajo de la imagen */    
+}
+ 
+.boton{
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 30px;
+}
+
+.boton.boton-rojo{
+    background-color: red;
+    color: white;   
+    font-size:20px;
+    font-weight: bold;
 }
