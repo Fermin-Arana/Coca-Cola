@@ -1,0 +1,31 @@
+*{ /*selecciona todo */
+    box-sizing: border-box;  /* hace que el tamaño de la caja sea solo del width y no sume ni los padding ni los margin */
+}
+
+header{
+    padding: 15px 0;
+}
+
+header .container a{
+    display: inline-block;
+    text-decoration: none; /* quita el subrayado */
+    color: red; 
+    margin: 0 15px;
+}
+
+
+header .container{
+    display: flex; /* el display le dice al navegador como se va a comportar la caja, como se acomoda, que tan grande es, etc. El block hace que use todo el espacio que tiene, inline solo usa el espacio necesario no acepta ni ancho ni alto, inline-block usa todo el espacio posible pero respeta ancho y alto, flex se ajusta solo con el espacio disponible. */
+    justify-content: space-between; /*el justify content trabaja sobre el eje x, el space between hace que todos las cajas tengan la misma distancia entre ellas */
+}
+
+header .logo{
+    width: 200px;  /* ancho */
+    height: 50px; /* altura */
+}
+
+.container{
+    width: 1140px; /* width pone un ancho fijo */
+    margin: 0 auto; /* es el margen entre contenedores, ponerlo asi hace que esten centrados */
+    align-items: center; /* el align items trabaja sobre el eje y, el center hace que todas las cajas esten centradas */
+}
