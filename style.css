@@ -12,7 +12,7 @@ header{
     background-color: white; /* color de fondo blanco */
 }
 
-header .container a{
+header .container nav a{
     display: inline-block;
     text-decoration: none; /* quita el subrayado */
     color: red; 
@@ -36,6 +36,15 @@ header .logo{
     align-items: center; /* el align items trabaja sobre el eje y, el center hace que todas las cajas esten centradas */
     padding-right: 15px; /* agrega un padding a la derecha */
     padding-left: 15px; /* agrega un padding a la izquierda */
+    position:relative;
+}
+
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0 auto;
+    position:relative
 }
 
 #inicio{
@@ -70,6 +79,7 @@ header .logo{
     text-align: center;
     text-decoration: none;
     padding: 15px 30px;
+    border:none;
 }
 
 .boton.boton-rojo{
@@ -77,4 +87,188 @@ header .logo{
     color: white;   
     font-size:20px;
     font-weight: bold;
+}
+
+.boton.boton-negro{
+    background-color: black;
+    color: white;   
+    font-size:20px;
+    font-weight: bold;
+}
+
+.boton.boton-negro:hover{
+    background-color: white;
+    color: black;
+    transition: 0.5s;
+}
+
+.boton.boton-blanco{
+    background-color: white;
+    color: red;   
+    font-size:20px;
+    font-weight: bold;
+    border: 1px solid red; /* agrega un borde rojo */
+    margin: 50px 20px 20px 20px; /* agrega margen inferior de 20px */
+    display: inline-block; /* asegura que respete el margen inferior */
+}
+.seccion{
+    padding:60px;
+}
+
+#nosotros{
+    background-image: url(img/latas.jpg);/*pone una imagen de fondo*/
+    background-size:cover; /*hace que la imagen de fondo ocupe todo el contenedor*/
+    color:white;
+    text-align:center;
+    
+}
+
+#nosotros p{
+    color:white;
+    text-align:center;
+    font-size:16px;
+    margin: 0;
+}
+
+.row{
+    display:flex;
+    flex-wrap: wrap; /* permite que los elementos se envuelvan en varias líneas, si no entra en la pantalla, se va hacia abajo, como usar el view word wrap en VSCode */  
+    margin-right:-15px; /* esto es para que el padding de las columnas no sume espacio */
+    margin-left:-15px; /* esto es para que el padding de las columnas no sume espacio */
+}
+
+.columna{
+    padding-right:15px;
+    padding-left:15px;
+}
+
+.columna-41{
+    width: 41%;
+}
+
+.columna-33{
+    width: 33.33%;
+}
+
+#servicios .bloque-servicio{
+    border: 1px solid grey; /* agrega un borde gris, se divide en tamaño, tipo y color */
+}
+
+#servicios .bloque-servicio .bloque-img-servicio img{
+    width: 100%;
+}
+
+#servicios .bloque-servicio .bloque-img-servicio.cuadrado-perfecto{
+    padding-bottom: 56.25%;
+}
+
+#servicios .bloque-servicio .bloque-contenido-servicio{
+    padding:15px;
+}
+
+#servicios .bloque-servicio .bloque-contenido-servicio h3{
+    margin-top:0;
+    font-size:25px;
+}
+
+.cuadrado-perfecto{
+    width: 100%;
+    padding-bottom: 100%; /* hace que el alto sea igual al ancho */
+    position: relative; /* para poder posicionar el contenido dentro */
+}
+
+.cuadrado-perfecto img{
+    width: 100%;
+    height:100%;
+    object-fit:cover; /* hace que la imagen cubra todo el contenedor */
+    object-position:center; /* centra la imagen */
+    position:absolute; /* hace que la imagen se posicione en relacion a su contenedor padre */
+    top:0;
+    left: 0;
+}
+
+#galeria h4{
+    padding-right: 15px;
+    padding-left: 15px;
+    text-align: center;
+    position:absolute;
+    top:40%;
+    color:white;
+    width:100%;
+    font-size: 30px;
+}
+
+#galeria img{
+    filter:grayscale(1); /* aplica un filtro de escala de grises a la imagen */
+}
+
+#galeria .cuadrado-perfecto:hover img{
+    filter:grayscale(0); /* quita el filtro de escala de grises al pasar el mouse */
+    transition: all 0.5s; /* hace que la transicion sea suave */
+}
+
+#galeria .cuadrado-perfecto:hover h4{
+    display: none;
+}
+
+#contactenos{
+    position:relative;
+}
+
+#contactenos iframe{
+    position:absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    height:100%;
+    filter: grayscale(1);
+}
+
+#contactenos form{
+    padding: 60px;
+    background-color: red;
+}
+
+#contactenos form .form-block{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#contactenos form .form-block .form-control{
+    display:block;
+    height:40px;
+    font-size:16px;
+    border: 1px solid grey;
+    width:100%;
+    padding: 5px 10px;
+}
+
+#contactenos form .form-block textarea{
+    display:block;
+    height:100px;
+    font-size:16px;
+    border: 1px solid grey;
+    width:100%;
+    padding: 5px 10px;
+}
+
+#contactenos form .form-block.bloque-ultimo{
+    margin-bottom: 0;
+
+}
+
+.columna-50{
+    width: 50%;
+}
+
+.empujar-58{
+    margin-left: 58.33%;
+}
+
+.empujar-66{
+    margin-left: 66.66%;
+}
+
+.empujar-50{
+    margin-left: 50%;
 }
